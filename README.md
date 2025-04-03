@@ -1,43 +1,76 @@
-# Introduction aux Réseaux de Neurones en Python
+# 🧠🔬 Classifier des états quantiques avec un réseau de neurones
 
-Ce projet est une introduction pratique aux réseaux de neurones artificiels en Python. Il vise à familiariser les débutants avec les concepts de base du machine learning à travers un exemple simple de classification binaire.
+## 🚀 Introduction
+Ce projet vise à explorer l'application des réseaux de neurones à la classification des états quantiques. Nous commencerons par un **projet introductif** sur les réseaux de neurones classiques avant d'étendre notre approche à des problématiques de l'informatique quantique.
 
-## 🔮 Objectif du projet
+📌 **Objectif final** : Utiliser un réseau de neurones pour classifier des états quantiques en fonction de certaines propriétés physiques (ex: entanglement, phase topologique, etc.).
 
-L'objectif est de construire et d'entraîner un **réseau de neurones simple** pour classifier des points dans un espace 2D. Le réseau apprendra à distinguer deux classes de points (rouge et bleu) à l'aide d'un modèle de type Multi-Layer Perceptron (MLP).
+---
 
-## 🎓 Concepts abordés
-- Perceptron et neurones artificiels
-- Fonction d'activation (ReLU, sigmoïde)
-- Entraînement par descente de gradient et rétropropagation
-- Évaluation et visualisation des résultats
+## 📚 Plan du projet
 
-## 📝 Plan du projet
+### **1️⃣ Introduction aux réseaux de neurones** *(Projet de base)*
+Avant d'appliquer un réseau de neurones à des problèmes quantiques, nous devons comprendre les fondamentaux.
 
-1. **Génération de données** : Création d'un dataset simple avec des points en 2D.
-2. **Construction du réseau de neurones** : Un MLP avec une ou deux couches cachées.
-3. **Entraînement du modèle** : Optimisation avec la descente de gradient.
-4. **Visualisation des résultats** : Représentation graphique de la classification.
-5. **Expérimentations** : Ajustement des hyperparamètres et test sur d'autres datasets.
+- Implémentation d'un **perceptron simple** (classification de points 2D)
+- Extension vers un **MLP (Multi-Layer Perceptron)** avec TensorFlow/PyTorch
+- Expérimentations avec différents hyperparamètres
 
-## 🔧 Technologies utilisées
-- **Python** (3.x)
-- **NumPy** (gestion des matrices et des vecteurs)
-- **Matplotlib** (visualisation des points)
-- **TensorFlow / PyTorch** (création et entraînement du réseau de neurones)
+👉 **Objectif** : Comprendre comment un réseau apprend et généralise une classification binaire.
 
-## 🛠 Installation et exécution
+---
 
-1. Cloner ce repository :
-   ```bash
-   git clone https://github.com/theohuetqc/neural-network.git
-   cd neural-network
-   ```
-2. Installer les dépendances :
-   ```bash
-   pip install numpy matplotlib tensorflow  # ou torch
-   ```
-3. Lancer le script principal :
-   ```bash
-   python neurostart.py
-   ```
+### **2️⃣ Génération et manipulation d'états quantiques**
+Pour appliquer le deep learning en quantique, nous devons générer et manipuler des **données quantiques**.
+
+- Introduction à **Qiskit** pour simuler des états quantiques
+- Génération d'**états aléatoires de qubits** (pur et mixte)
+- Extraction de **features** à partir des matrices de densité
+
+👉 **Objectif** : Avoir un dataset d'états quantiques prêts à être classifiés.
+
+---
+
+### **3️⃣ Construction d'un classificateur quantique**
+Nous appliquerons un réseau de neurones classique pour classifier ces états.
+
+- Conception d'un **MLP** capable de distinguer des classes d'états quantiques
+- Entraînement sur des **mesures physiques** (entropie de von Neumann, concurrence, etc.)
+- Test et validation du modèle
+
+👉 **Objectif** : Observer si un réseau de neurones peut apprendre des caractéristiques physiques d'un système quantique.
+
+---
+
+### **4️⃣ Vers un classificateur quantique hybride** *(Bonus avancé)*
+Une fois les bases posées, nous pourrons aller plus loin avec des architectures hybrides :
+
+- Introduction aux **Quantum Neural Networks (QNNs)** avec Pennylane
+- Entraînement d'un modèle **hybride classique-quantique**
+- Comparaison des performances entre approche classique et quantique
+
+👉 **Objectif** : Comprendre comment les QNNs peuvent améliorer la classification d'états quantiques.
+
+---
+
+## 📦 Installation et Prérequis
+
+1. **Cloner ce repo**
+```bash
+git clone https://github.com/ton-pseudo/classification-etats-quantiques.git
+cd classification-etats-quantiques
+```
+
+2. **Installer les dépendances Python**
+```bash
+pip install numpy matplotlib tensorflow torch qiskit pennylane
+```
+
+---
+
+## 🛠 Progression (Soon)
+- [ ] Implémentation d'un perceptron simple
+- [ ] Ajout d'un MLP plus complexe
+- [ ] Intégration de Qiskit pour générer des états quantiques
+- [ ] Construction du classificateur quantique
+- [ ] Expérimentations et analyses
