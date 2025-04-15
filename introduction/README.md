@@ -8,7 +8,7 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
 
 ## 🎓 Concepts abordés
 - Perceptron et neurones artificiels
-- Fonction d'activation (ReLU, sigmoïde)
+- Fonction d'activation (sigmoïde)
 - Entraînement par descente de gradient et rétropropagation
 - Évaluation et visualisation des résultats
 
@@ -32,6 +32,7 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
    ```bash
    git clone https://github.com/theohuetqc/neural-network.git
    cd neural-network
+   cd introduction
    ```
 2. Installer les dépendances :
    ```bash
@@ -39,5 +40,5 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
    ```
 3. Lancer le script principal :
    ```bash
-   python neurostart.py
+   python main.py
    ```

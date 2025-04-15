@@ -57,8 +57,8 @@ Une fois les bases posées, nous pourrons aller plus loin avec des architectures
 
 1. **Cloner ce repo**
 ```bash
-git clone https://github.com/ton-pseudo/classification-etats-quantiques.git
-cd classification-etats-quantiques
+git clone https://github.com/theohuetqc/neural-network.git
+cd neural-network
 ```
 
 2. **Installer les dépendances Python**
@@ -69,7 +69,7 @@ pip install numpy matplotlib tensorflow torch qiskit pennylane
 ---
 
 ## 🛠 Progression (Soon)
-- [ ] Implémentation d'un perceptron simple
+- [X] Implémentation d'un perceptron simple
 - [ ] Ajout d'un MLP plus complexe
 - [ ] Intégration de Qiskit pour générer des états quantiques
 - [ ] Construction du classificateur quantique
