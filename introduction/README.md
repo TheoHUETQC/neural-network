@@ -58,8 +58,7 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
 1. Cloner ce repository :
    ```bash
    git clone https://github.com/theohuetqc/neural-network.git
-   cd neural-network
-   cd introduction
+   cd neural-network/introduction
    ```
 2. Installer les dépendances :
    ```bash

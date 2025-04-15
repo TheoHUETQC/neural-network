@@ -58,7 +58,7 @@ Une fois les bases posées, nous pourrons aller plus loin avec des architectures
 ```
 📂 neural-network/
 │
-│   📂 introduction/
+├── 📂 introduction/
 │   │
 │   ├── 📂 perceptron/
 │   │   ├── perceptron.py         ← Classe Perceptron
