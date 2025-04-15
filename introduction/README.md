@@ -20,6 +20,23 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
 4. **Visualisation des résultats** : Représentation graphique de la classification.
 5. **Expérimentations** : Ajustement des hyperparamètres et test sur d'autres datasets.
 
+## 🛠 Structure du dossier
+
+```
+📂 introduction/
+│
+├── 📂 perceptron/
+│   ├── perceptron.py         ← Classe Perceptron
+│   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
+│   └── main.py               ← Script principal (data + apprentissage + affichage)
+│
+├── 📂 results/
+│   ├── perceptron-training-evolution.mp4       
+│   └── perceptron-result.py 
+│
+└── 📜 README.md              ← (ce fichier)
+```
+
 ## 🔧 Technologies utilisées
 - **Python** (3.x)
 - **NumPy** (gestion des matrices et des vecteurs)

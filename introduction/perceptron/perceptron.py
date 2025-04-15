@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 class Perceptron :
     def __init__(self, input_size, lr=0.1) :
@@ -14,14 +13,16 @@ class Perceptron :
     def predict(self, x) : # Fonction de prédiction
         return self.f(np.dot(x, self.weights) + self.bias)
     
-    def predict_label(self, x): #donne une valeur 0 ou 1
+    def predict_label(self, x) : # donne une valeur 0 ou 1
         return int(self.predict(x) > 0.5)
+    
+    def compute_loss(self, inputs, z_reel) : # fonction de cout
+        preds = np.array([self.predict(inputs[i]) for i in range(len(inputs))])
+        errors = z_reel - preds
+        return np.mean((errors)**2) # erreur quadratique moyenne (MSE)
 
-    def train(self, inputs, z_reel, Nt) : # Apprentissage
-        #initialisation pour l'annimation
-        prediction_for_animation = []
-        pred_for_animation = []
-        for t in range(Nt) :
+    def train(self, inputs, z_reel, epochs) : # Apprentissage
+        for epoch in range(epochs) :
             for i in range(len(inputs)) :
                 #calculs
                 pred = self.predict(inputs[i])
@@ -29,4 +30,9 @@ class Perceptron :
                 # ajustements des parametres
                 self.weights = self.weights + self.lr * error * inputs[i] # Mise à jour des poids
                 self.bias = self.bias + self.lr * error # Mise à jour du biais
+
+            if epoch % 10 == 0 :
+                loss = self.compute_loss(inputs, z_reel)
+                print(f"Epoch {epoch}, loss = {loss:.4f}")
+
         #pas de vrai return car on souhaite juste ajuster bias et weights pour améliorer nos futurs predictions

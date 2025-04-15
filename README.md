@@ -53,6 +53,27 @@ Une fois les bases posées, nous pourrons aller plus loin avec des architectures
 
 ---
 
+## 🛠 Structure du dossier
+
+```
+📂 neural-network/
+│
+├── 📂 introduction/
+│   │
+│   ├── 📂 perceptron/
+│   │   ├── perceptron.py         ← Classe Perceptron
+│   │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
+│   │   └── main.py               ← Script principal (data + apprentissage + affichage)
+│   │
+│   ├── 📂 results/
+│   │   ├── perceptron-training-evolution.mp4       
+│   │   └── perceptron-result.py 
+│   │
+│   └── 📜 README.md              ← (explication du projet d'introduction)
+│ 
+└── 📜 README.md                  ← (ce fichier)
+```
+
 ## 📦 Installation et Prérequis
 
 1. **Cloner ce repo**
