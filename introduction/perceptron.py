@@ -6,7 +6,7 @@ import matplotlib.animation as animation
 
 #constante de numérisation :
 Nt = 100 #nombre de prediction
-Nx = 100 #nombre d'entrée
+Nx = 1000 #nombre d'entrée
 
 #constante du problème :
 xmin, xmax = 0, 10
@@ -14,7 +14,7 @@ ymin, ymax = 0, 10
 
 #pour l'aniamtion :
 animation_interval = 5  #Intervalle pour l'animation (tout les combiens de step on sauvegarde les données)
-save_animation = False #si on sauvegarde l'animation sur la machine
+save_animation = True #si on sauvegarde l'animation sur la machine
 save_frames = True  #si on fait une annimation
 
 ############################### fonctions ###############################
@@ -84,12 +84,12 @@ class Perceptron :
                 # ajustements des parametres
                 self.weights = self.weights + self.lr * error * inputs[i] # Mise à jour des poids
                 self.bias = self.bias + self.lr * error # Mise à jour du biais
-            if t % animation_interval == 0:
+            if t % animation_interval == 0 :
                 # Prédiction sur la grille complète pour l'animation
                 preds_grid = np.array([self.predict(pt) for pt in grid_inputs])
                 preds_grid_2D = preds_grid.reshape(Nx, Nx)
                 prediction_for_animation.append(preds_grid_2D)
-                print(f"Image {t/animation_interval + 1}/{Nt/animation_interval}")
+                print(f"Image {t//animation_interval + 1}/{Nt//animation_interval}")
         return prediction_for_animation #pas de vrai return car on souhaite juste ajuster bias et weights pour améliorer nos futurs predictions
 
 ############################### Main ###############################
