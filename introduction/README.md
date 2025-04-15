@@ -28,11 +28,21 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
 ├── 📂 perceptron/
 │   ├── perceptron.py         ← Classe Perceptron
 │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
-│   └── main.py               ← Script principal (data + apprentissage + affichage)
+│   ├── main.py               ← Script principal (data + apprentissage + affichage)
+│   │
+│   └── 📂 results/
+│       ├── perceptron-animation-evolution.py    ← Script pour voir l'évolution de l'apprentissage d'un perceptron
+│       ├── perceptron-training-evolution.mp4       
+│       └── perceptron-result.png 
 │
-├── 📂 results/
-│   ├── perceptron-training-evolution.mp4       
-│   └── perceptron-result.py 
+├── 📂 multi-layer-perceptron/
+│   ├── layer.py              ← Classe layer pour ce qui se passe dans une couche
+│   ├── mlp.py                ← Classe du reseau entier
+│   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
+│   ├── main.py               ← Script principal (data + apprentissage + affichage)
+│   │
+│   └── 📂 results/
+│       └── multi-layer-perceptron-result.png
 │
 └── 📜 README.md              ← (ce fichier)
 ```
@@ -57,5 +67,5 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
    ```
 3. Lancer le script principal :
    ```bash
-   python main.py
+   python perceptron/main.py
    ```

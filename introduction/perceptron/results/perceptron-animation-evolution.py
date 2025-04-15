@@ -14,7 +14,7 @@ ymin, ymax = 0, 10
 
 #pour l'aniamtion :
 animation_interval = 5  #Intervalle pour l'animation (tout les combiens de step on sauvegarde les données)
-save_animation = True #si on sauvegarde l'animation sur la machine
+save_animation = False #si on sauvegarde l'animation sur la machine
 save_frames = True  #si on fait une annimation
 
 ############################### fonctions ###############################
@@ -44,7 +44,7 @@ def animate_wavefunction_2D(prediction_for_animation):
     plt.colorbar(im, label="prediction")
 
     if save_animation:
-        ani.save("perceptron.mp4", writer="ffmpeg", fps=20)
+        ani.save("perceptron-training-evolution.mp4", writer="ffmpeg", fps=20)
         plt.close(fig)
     else:
         plt.show()

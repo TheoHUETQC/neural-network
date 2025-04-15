@@ -7,11 +7,11 @@ class Perceptron :
         self.bias = np.random.randn() #le biais (des random)
         self.lr = lr #taux d aprentissage
         
-    def f(self, x) : # Sigmoïde qui va de 0 a 1
+    def sigmoide(self, x) : # Sigmoïde qui va de 0 a 1
         return 1/(1+ np.exp(-x))
     
     def predict(self, x) : # Fonction de prédiction
-        return self.f(np.dot(x, self.weights) + self.bias)
+        return self.sigmoide(np.dot(x, self.weights) + self.bias)
     
     def predict_label(self, x) : # donne une valeur 0 ou 1
         return int(self.predict(x) > 0.5)
