@@ -2,17 +2,17 @@
 
 Ce projet est une introduction pratique aux réseaux de neurones artificiels en Python. Il vise à familiariser les débutants avec les concepts de base du machine learning à travers un exemple simple de classification binaire.
 
-## 🔮 Objectif du projet
+## Objectif du projet
 
 L'objectif est de construire et d'entraîner un **réseau de neurones simple** pour classifier des points dans un espace 2D. Le réseau apprendra à distinguer deux classes de points (rouge et bleu) à l'aide d'un modèle de type Multi-Layer Perceptron (MLP).
 
-## 🎓 Concepts abordés
+## Concepts abordés
 - Perceptron et neurones artificiels
 - Fonction d'activation (sigmoïde)
 - Entraînement par descente de gradient et rétropropagation
 - Évaluation et visualisation des résultats
 
-## 📝 Plan du projet
+## Plan du projet
 
 1. **Génération de données** : Création d'un dataset simple avec des points en 2D.
 2. **Construction du réseau de neurones** : Un MLP avec une ou deux couches cachées.
@@ -47,12 +47,6 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
 └── 📜 README.md              ← (ce fichier)
 ```
 
-## 🔧 Technologies utilisées
-- **Python** (3.x)
-- **NumPy** (gestion des matrices et des vecteurs)
-- **Matplotlib** (visualisation des points)
-- **TensorFlow / PyTorch** (création et entraînement du réseau de neurones)
-
 ## 🛠 Installation et exécution
 
 1. Cloner ce repository :
@@ -62,7 +56,7 @@ L'objectif est de construire et d'entraîner un **réseau de neurones simple** p
    ```
 2. Installer les dépendances :
    ```bash
-   pip install numpy matplotlib tensorflow  # ou torch
+   pip install numpy matplotlib
    ```
 3. Lancer le script principal :
    ```bash
