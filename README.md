@@ -1,59 +1,59 @@
-# 🧠🔬 Classifier des états quantiques avec un réseau de neurones
+# 🧠 Neural Decoder for Quantum Error Correction
 
 ## 🚀 Introduction
-Ce projet vise à explorer l'application des réseaux de neurones à la classification des états quantiques. Nous commencerons par un **projet introductif** sur les réseaux de neurones classiques avant d'étendre notre approche à des problématiques de l'informatique quantique.
+This project explores the intersection between **machine learning** and **quantum error correction (QEC)**.  
+It aims to demonstrate how a **neural network** can learn to **decode and correct quantum errors** from noisy measurement data.
 
-📌 **Objectif final** : Utiliser un réseau de neurones pour classifier des états quantiques en fonction de certaines propriétés physiques (ex: entanglement, phase topologique, etc.).
+We start from the basics — building a **perceptron** and a **multi-layer perceptron (MLP)** from scratch — before extending these concepts to a **decoder** capable of predicting optimal corrections in simple quantum codes such as the **3-qubit bit-flip code**.
 
----
-
-## 📚 Plan du projet
-
-### **1️⃣ Introduction aux réseaux de neurones** *(Projet de base)*
-Avant d'appliquer un réseau de neurones à des problèmes quantiques, nous devons comprendre les fondamentaux.
-
-- Implémentation d'un **perceptron simple** (classification de points 2D)
-- Extension vers un **MLP (Multi-Layer Perceptron)** avec TensorFlow/PyTorch
-- Expérimentations avec différents hyperparamètres
-
-👉 **Objectif** : Comprendre comment un réseau apprend et généralise une classification binaire.
+📌 **Final objective**: Train a neural network to map **error syndromes** to **correction operations**, effectively simulating a *machine-learning-based quantum decoder*.
 
 ---
 
-### **2️⃣ Génération et manipulation d'états quantiques**
-Pour appliquer le deep learning en quantique, nous devons générer et manipuler des **données quantiques**.
+## 📚 Project Overview
 
-- Introduction à **Qiskit** pour simuler des états quantiques
-- Génération d'**états aléatoires de qubits** (pur et mixte)
-- Extraction de **features** à partir des matrices de densité
+### **1️⃣ Classical Neural Network Foundations**
+Before applying machine learning to quantum systems, we first build and understand the fundamentals of classical neural networks.
 
-👉 **Objectif** : Avoir un dataset d'états quantiques prêts à être classifiés.
+- Implementation of a **simple perceptron** (binary classification in 2D) ![perceptron-result](introduction/perceptron/results/perceptron-result.png)
+- Extension to a **multi-layer perceptron (MLP)** for more complex problems ![multi-layer-perceptron-result](introduction/multi-layer-perceptron/results/multi-layer-perceptron-result.png)
+- Experimentation with architectures and learning parameters
 
----
-
-### **3️⃣ Construction d'un classificateur quantique**
-Nous appliquerons un réseau de neurones classique pour classifier ces états.
-
-- Conception d'un **MLP** capable de distinguer des classes d'états quantiques
-- Entraînement sur des **mesures physiques** (entropie de von Neumann, concurrence, etc.)
-- Test et validation du modèle
-
-👉 **Objectif** : Observer si un réseau de neurones peut apprendre des caractéristiques physiques d'un système quantique.
+**Goal:** Understand how neural networks learn and generalize decision boundaries.
 
 ---
 
-### **4️⃣ Vers un classificateur quantique hybride** *(Bonus avancé)*
-Une fois les bases posées, nous pourrons aller plus loin avec des architectures hybrides :
+### **2️⃣ Neural Decoder for Quantum Error Correction** *(Main Project)*
+The core part of this repository focuses on **quantum error correction through supervised learning**.
 
-- Introduction aux **Quantum Neural Networks (QNNs)** avec Pennylane
-- Entraînement d'un modèle **hybride classique-quantique**
-- Comparaison des performances entre approche classique et quantique
+- Simulation of the **3-qubit bit-flip code**
+- Generation of **training data**: random errors and corresponding **syndromes**
+- Training an **MLP** to predict which qubit was flipped based on the measured syndrome
+- Evaluation of the model’s correction accuracy as a function of noise probability
 
-👉 **Objectif** : Comprendre comment les QNNs peuvent améliorer la classification d'états quantiques.
+**Goal:** Show that a neural network can *learn* the logical decoding rule of a quantum code.
+
+#### 🔍 Possible extensions
+- Add phase-flip or 5-qubit code simulations  
+- Compare performance to ideal (analytical) decoding  
+- Explore **reinforcement learning** for adaptive error correction  
 
 ---
 
-## 🛠 Structure du dossier
+### **3️⃣ Classical Image Classification** *(my Personal Bonus)*
+As an optional exploration, the project can include a small image classification demo to test the MLP architecture on standard data before applying it to quantum decoding.
+
+---
+
+## 🧠 Conceptual Connection
+Quantum error correction aims to **stabilize quantum information** against noise and decoherence.  
+A **decoder** takes the *measured syndrome* (partial information) and decides which correction to apply.
+
+Machine learning offers an alternative: instead of designing the decoder manually, we **train** a neural network to *infer* optimal corrections from data, an approach related to **feedback control** and **reinforcement learning** techniques discussed by *Dr. Giovanni Cemin (MPIPKS)* in his Quant25 talk *“Reinforcement Learning to Stabilize Nonequilibrium Phases of Matter.”*
+
+---
+
+## 🛠 Repository Structure
 
 ```
 📂 neural-network/
@@ -61,9 +61,9 @@ Une fois les bases posées, nous pourrons aller plus loin avec des architectures
 ├── 📂 introduction/
 │   │
 │   ├── 📂 perceptron/
-│   │   ├── perceptron.py         ← Classe Perceptron
+│   │   ├── perceptron.py         ← Perceptron Classe
 │   │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
-│   │   ├── main.py               ← Script principal (data + apprentissage + affichage)
+│   │   ├── main.py               ← Main script (data + learning + plot)
 │   │   │
 │   │   └── 📂 results/
 │   │       ├── perceptron-animation-evolution.py    ← Script pour voir l'évolution de l'apprentissage d'un perceptron
@@ -74,34 +74,55 @@ Une fois les bases posées, nous pourrons aller plus loin avec des architectures
 │   │   ├── layer.py              ← Classe layer pour ce qui se passe dans une couche
 │   │   ├── mlp.py                ← Classe du reseau entier
 │   │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
-│   │   ├── main.py               ← Script principal (data + apprentissage + affichage)
+│   │   ├── main.py               ← Main script (data + learning + plot)
 │   │   │
 │   │   └── 📂 results/
 │   │       └── multi-layer-perceptron-result.png
 │   │
-│   └── 📜 README.md              ← (readme associé au projet d'introduction)
-│ 
-└── 📜 README.md                  ← (ce fichier)
+│   └── 📜 README.md              ← readme associate to the introduction project 
+│
+├── 📂 quantum-decoder/
+│   ├── data_generation.py ← simulate bit-flip code and generate training samples
+│   ├── decoder_mlp.py ← neural network model for decoding
+│   ├── train_decoder.py ← training and evaluation script
+│   ├── plots.py ← visualization utilities (accuracy vs noise rate)
+│   │
+│   └── 📂 results/
+│       └── decoder_accuracy.png
+│
+├── 📄 RL_talk_note_Quant25.pdf   ← Notes from Cemin's Talk about RL
+│
+└── 📜 README.md                  ← (this file)
 ```
 
-## 📦 Installation et Prérequis
+## ⚙️ Installation & Dependencies
 
-1. **Cloner ce repo**
+1. **Clone this repository**
 ```bash
 git clone https://github.com/theohuetqc/neural-network.git
 cd neural-network
 ```
 
-2. **Installer les dépendances Python**
+2. **Install Python dependencies**
 ```bash
-pip install numpy matplotlib tensorflow torch qiskit pennylane
+pip install numpy matplotlib torch qiskit
 ```
 
 ---
 
-## 🛠 Progression (Soon)
-- [X] Implémentation d'un perceptron simple
-- [ ] Ajout d'un MLP plus complexe
-- [ ] Intégration de Qiskit pour générer des états quantiques
-- [ ] Construction du classificateur quantique
-- [ ] Expérimentations et analyses
+## 🚧 Progress (Soon)
+| Task                                         | Status         |
+| -------------------------------------------- | -------------- |
+| Implemented perceptron                       | ✅              |
+| Implemented customizable MLP                 | ✅              |
+| Add bit-flip code simulator                  | 🔄 In progress |
+| Train neural decoder (syndrome → correction) | 🔄 Planned     |
+| Visualize decoder performance                | 🔄 Planned     |
+| (Optional) Image classification demo         | ⏸ Optional     |
+
+---
+
+## 🧾 References
+- Giovanni Cemin (MPIPKS), "Reinforcement learning to stabilize nonequilibrium phases of matter with active feedback using partial information", Quant25 Conference, 2025.
+- Related work: “Entanglement Transitions in Unitary Circuit Games”, ResearchGate, 2024
+- [My notes from Cemin's Talk](RL_talk_note_Quant25.pdf)
