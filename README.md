@@ -1,6 +1,6 @@
 # 🧠 Neural Decoder for Quantum Error Correction
 
-## 🚀 Introduction
+## Introduction
 This project explores the intersection between **machine learning** and **quantum error correction (QEC)**.  
 It aims to demonstrate how a **neural network** can learn to **decode and correct quantum errors** from noisy measurement data.
 
@@ -10,9 +10,9 @@ We start from the basics — building a **perceptron** and a **multi-layer perce
 
 ---
 
-## 📚 Project Overview
+## Project Overview
 
-### **1️⃣ Classical Neural Network Foundations**
+### **1. Classical Neural Network Foundations**
 Before applying machine learning to quantum systems, we first build and understand the fundamentals of classical neural networks.
 
 - Implementation of a **simple perceptron** (binary classification in 2D) ![perceptron-result](introduction/perceptron/results/perceptron-result.png)
@@ -21,9 +21,7 @@ Before applying machine learning to quantum systems, we first build and understa
 
 **Goal:** Understand how neural networks learn and generalize decision boundaries.
 
----
-
-### **2️⃣ Neural Decoder for Quantum Error Correction** *(Main Project)*
+### **2. Neural Decoder for Quantum Error Correction** *(Main Project)*
 The core part of this repository focuses on **quantum error correction through supervised learning**.
 
 - Simulation of the **3-qubit bit-flip code**
@@ -33,19 +31,17 @@ The core part of this repository focuses on **quantum error correction through s
 
 **Goal:** Show that a neural network can *learn* the logical decoding rule of a quantum code.
 
-#### 🔍 Possible extensions
+#### Possible extensions
 - Add phase-flip or 5-qubit code simulations  
 - Compare performance to ideal (analytical) decoding  
 - Explore **reinforcement learning** for adaptive error correction  
 
----
-
-### **3️⃣ Classical Image Classification** *(my Personal Bonus)*
+### **3. Classical Image Classification** *(my Personal Bonus)*
 As an optional exploration, the project can include a small image classification demo to test the MLP architecture on standard data before applying it to quantum decoding.
 
 ---
 
-## 🧠 Conceptual Connection
+## Conceptual Connection
 Quantum error correction aims to **stabilize quantum information** against noise and decoherence.  
 A **decoder** takes the *measured syndrome* (partial information) and decides which correction to apply.
 
@@ -122,7 +118,7 @@ pip install numpy matplotlib torch qiskit
 
 ---
 
-## 🧾 References
+## References
 - Giovanni Cemin (MPIPKS), "Reinforcement learning to stabilize nonequilibrium phases of matter with active feedback using partial information", Quant25 Conference, 2025.
 - Related work: “Entanglement Transitions in Unitary Circuit Games”, ResearchGate, 2024
 - [My notes from Cemin's Talk](RL_talk_note_Quant25.pdf)
