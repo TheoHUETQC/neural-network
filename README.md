@@ -1,80 +1,45 @@
-# Neural Network for Reinforcement learning
+# Introduction to Neural Networks in Python
 
-## Introduction
-This project explores the intersection between **machine learning** and **quantum information**.  
-It aims to demonstrate how a **neural network** can learn to **stabilize nonequilibrium phases of matter with active feedback** using partial information.
+This project is a hands-on introduction to artificial neural networks in Python. Its goal is to help me become familiar with the basic concepts of machine learning through a simple example of binary classification.
 
-We start from the basics, building a **perceptron** and a **multi-layer perceptron (MLP)** from scratch, before extending these concepts to a **quantum circuit**.
+## Project Objective
 
----
+The objective is to build from scratch and train a **neural network** to classify points in a 2D space. The network will learn to distinguish between two classes of points (red and blue) using a Multi-Layer Perceptron (MLP) model.
 
-## Project Overview
+## Concepts Covered
+- Perceptrons and artificial neurons
+- Activation functions (sigmoid, ReLU, tanh)
+- Training using gradient descent and backpropagation
+- Evaluation and visualization of results (loss, accuracy)
 
-### **1. Classical Neural Network Foundations**
-Before applying machine learning to quantum systems, we first build and understand the fundamentals of classical neural networks.
+## Project Plan
 
-- Implementation of a **simple perceptron** (binary classification in 2D)
-- Extension to a **multi-layer perceptron (MLP)** for more complex problems
-- Experimentation with architectures and learning parameters
+1. **Data Generation**: Creation of a simple dataset with 2D points.
+2. **Neural Network Construction**: An MLP with one or two hidden layers.
+3. **Model training**: Optimization using gradient descent.
+4. **Visualization of results**: Graphical representation of classification and training.
+5. **Experiments**: Hyperparameter tuning and testing on other datasets.
 
-**Goal:** Understand how neural networks learn and generalize decision boundaries.
+## The Project
 
-### **2. Stabilize nonequilibrium phases of matter with active feedback** using partial information *(Main Project)*
-The core part of this repository focuses on **Reinforcement learning**.
+To view and review the results I obtained, simply open the notebook `neural-network/multi-layer-perceptron/mlp_test.ipynb`. There you will find visualizations of the training process, the results of our neural network, and the neural network along with its biases and all its weights.
 
-- 
-- 
-- 
-
-**Goal:** .
-
-### **3. Classical Image Classification** *(my Personal Bonus)*
-As an optional exploration, the project can include a small image classification demo to test the MLP architecture on standard data before applying it to quantum decoding.
-
----
-
-## Repository Structure
+## Folder Structure
 
 ```
-📂 Reinforcement-learning/
+📂 neural-network/
 │
-├── 📂 neural-network/
-│   │
-│   ├── 📂 perceptron/
-│   │   ├── perceptron.py         ← Perceptron Classe
-│   │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
-│   │   ├── main.py               ← Main script (data + learning + plot)
-│   │   └── perceptron-animation-evolution.py    ← Script pour voir l'évolution de l'apprentissage d'un perceptron
-│   │
-│   ├── 📂 multi-layer-perceptron/
-│   │   ├── layer.py              ← Classe layer pour ce qui se passe dans une couche
-│   │   ├── mlp.py                ← Classe du reseau entier
-│   │   ├── utils.py              ← Fonctions auxiliaires (visualisation, métriques...)
-│   │   └── mlp-test.ipynb        ← Main script (data + learning + plot)
-│   │
-│   └── 📜 README.md              ← readme associate to the introduction project 
+├── 📂 perceptron/
+│   ├── perceptron.py         ← Perceptron class
+│   ├── utils.py              ← Utility functions (visualization, metrics, etc.)
+│   ├── main.py               ← Main script (data + training + display)
+│   └── perceptron-animation-evolution.py    ← Evolution of a perceptron's learning
 │
+├── 📂 multi-layer-perceptron/
+│   ├── layer.py              ← Layer class for what happens within a layer
+│   ├── mlp.py                ← Class for the entire network
+│   ├── utils.py              ← Auxiliary functions (visualization, metrics...)
+│   └── mlp_test.ipynb        ← Main script (data + training + display)
 │
-├── 📄 RL_talk_note_Quant25.pdf   ← Notes from Cemin's Talk about RL
-│
-└── 📜 README.md                  ← (this file)
+└── 📜 README.md              ← (this file)
 ```
-
----
-
-## 🚧 Progress (Soon)
-| Task                                         | Status         |
-| -------------------------------------------- | -------------- |
-| Implemented perceptron                       | ✅              |
-| Implemented customizable MLP                 | ✅              |
-|                   | 🔄 In progress |
-|  | 🔄 Planned     |
-|                 | 🔄 Planned     |
-| (Optional) Image classification demo         | ⏸ Optional     |
-
----
-
-## References
-- Giovanni Cemin (MPIPKS), "Reinforcement learning to stabilize nonequilibrium phases of matter with active feedback using partial information", Quant25 Conference, 2025.
-- Related work: “Entanglement Transitions in Unitary Circuit Games”, ResearchGate, 2024
-- [My notes from Cemin's Talk](RL_talk_note_Quant25.pdf)
