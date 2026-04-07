@@ -32,7 +32,7 @@ The objective is to build **from scratch** and train a **neural network** to cla
 
 To view and review the results I obtained, simply open the notebook `multi-layer-perceptron/point-classification-mlp.ipynb`. There you will find visualizations of the training process, the results of our neural network, and the neural network along with its biases and all its weights.
 
-### *my Personal Bonus* Classical Image Classification** (soon)
+### *my Personal Bonus* **Classical Image Classification** (soon)
 As an optional exploration, the project can include a small image classification demo to test the MLP architecture on standard data.
 
 --- 
