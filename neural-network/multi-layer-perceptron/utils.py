@@ -56,7 +56,7 @@ def mlp_matplotlib_view(mlp) : # ancienne version que je garde permettant de plo
             if layers != [] :
                 percept_label = str(round(mlp.layers[lay_idx-1].bias[percept_idx], 2))
                 plt.text(x,y, percept_label)
-            percept_cercle = plt.Circle((x, y), radius=0.25, color=percept_color, label= "perceptron "+str(percept_idx))
+            percept_cercle = plt.Circle((x, y), radius=0.25, color=percept_color, label= "neuron "+str(percept_idx))
             plt.gca().add_artist(percept_cercle)
             
         layers.append(perceptrons)
@@ -139,10 +139,10 @@ def mlp_networkx_view(mlp, filename="graphic_view_mlp.png"):
 
     from matplotlib.patches import Patch
     legend_elements = [
-        Patch(facecolor=color_map['input'], edgecolor='black', label='Entrée'),
-        Patch(facecolor=color_map['hidden'], edgecolor='black', label='Cachée'),
-        Patch(facecolor=color_map['output'], edgecolor='black', label='Sortie'),
-        Patch(facecolor=color_map['bias'], edgecolor='black', label='Biais')
+        Patch(facecolor=color_map['input'], edgecolor='black', label='Input'),
+        Patch(facecolor=color_map['hidden'], edgecolor='black', label='Hidden'),
+        Patch(facecolor=color_map['output'], edgecolor='black', label='Output'),
+        Patch(facecolor=color_map['bias'], edgecolor='black', label='Bias')
     ]
     plt.legend(handles=legend_elements, loc='upper right')
     plt.axis('off')
